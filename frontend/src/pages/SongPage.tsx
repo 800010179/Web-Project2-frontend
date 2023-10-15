@@ -6,7 +6,7 @@ import { getReviewsBySong } from '../hooks/getReviewsBySong';
 import { createReview } from '../hooks/createReview';
 import { deleteReview }from '../hooks/deleteReview';
 import Song from '../interfaces/Song';
-import User from '../interfaces/User';
+//import User from '../interfaces/User';
 import SongPageReview from '../components/ReviewCard/SongPageReview';
 import { editReview } from '../hooks/editReview';
 import { likeReview } from '../hooks/likeReview';
@@ -25,14 +25,14 @@ const SongPage: React.FC = () => {
   const [orderByDateOldest, setOrderByDateOldest] = useState(false);
   const [orderByLikesLeast, setOrderByLikesLeast] = useState(false);
   const [orderByLikesMost, setOrderByLikesMost] = useState(false);
-  const userString = localStorage.getItem('user');
+  //const userString = localStorage.getItem('user');
   const [validated, setValidated] = useState(false);
-  const user: User = userString ? JSON.parse(userString) : null;
+  //const user: User = userString ? JSON.parse(userString) : null;
   let userId = 'none';
   let songIdString = 'none';
-  if (user.id != null) {
-    userId = user.id;
-  }
+  //if (user.id != null) {
+   // userId = user.id;
+  //}
   if (songId != null) {
     songIdString = songId;
   }
